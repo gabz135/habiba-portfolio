@@ -1,0 +1,137 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff0f5;
+    color: #2b2b2b;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 3rem;
+}
+
+
+nav {
+    background: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 20px auto;
+    border: 1px solid #ffd1dc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff4d88;
+}
+
+section {
+    padding: 1rem 0;
+}
+
+.section-heading {
+    color: #ff4d88;
+    display: inline-block;
+    border-bottom: 3px solid #ff4d88;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2b2b2b;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+    transition: all 0.3s ease;
+}
+
+#hero img:hover {
+    border-color: #ff4d88;
+    transform: scale(1.03);
+}
+
+#hero {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#about-section p {
+    font-size: large;
+    line-height: 1.6;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #ffd1dc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.project-card h2 {
+    margin-top: 0;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.tech-stack span {
+    background: #ffe4ec;
+    color: #ff4d88;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.project-media {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.project-media img {
+    width: 400px;
+    border-radius: 12px;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #ff4d88;
+    font-weight: bold;
+}
