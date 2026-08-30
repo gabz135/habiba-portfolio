@@ -1,31 +1,37 @@
-
 const timeline = document.querySelector(".timeline");
 const items = document.querySelectorAll(".timeline-item");
+
 
 function updateTimeline(){
 
     const rect = timeline.getBoundingClientRect();
 
-    const start = window.innerHeight * 0.2;
-    const end = rect.height + window.innerHeight * 0;
+    const windowHeight = window.innerHeight;
 
-    let progress = (start - rect.top) / end;
 
-    progress = Math.max(0, Math.min(progress,1));
+    let progress =
+        (windowHeight - rect.top) /
+        rect.height*0.6;
 
-    timeline.style.setProperty("--progress", `${progress * 100}%`);
 
-    items.forEach(item=>{
+    progress = Math.max(0, Math.min(1, progress));
 
-        const itemTop = item.getBoundingClientRect().top;
 
-        if(itemTop < window.innerHeight * 0.55){
+    timeline.style.setProperty(
+        "--progress",
+        `${progress * 100}%`
+    );
+
+
+    items.forEach(item => {
+
+        const itemTop =
+            item.getBoundingClientRect().top;
+
+
+        if(itemTop < windowHeight * 0.5){
 
             item.classList.add("active");
-
-        }else{
-
-            item.classList.remove("active");
 
         }
 
@@ -33,5 +39,14 @@ function updateTimeline(){
 
 }
 
-window.addEventListener("scroll", updateTimeline);
-window.addEventListener("load", updateTimeline);
+
+window.addEventListener(
+    "scroll",
+    updateTimeline
+);
+
+
+window.addEventListener(
+    "load",
+    updateTimeline
+);
