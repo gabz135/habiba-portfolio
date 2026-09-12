@@ -50,3 +50,61 @@ window.addEventListener(
     "load",
     updateTimeline
 );
+
+const slides = document.querySelectorAll(".recent-slide");
+const previousButton = document.querySelector(".slider-button.prev");
+const nextButton = document.querySelector(".slider-button.next");
+const dots = document.querySelectorAll(".slider-dot");
+const slideCounter = document.querySelector(".slide-counter");
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+    slideCounter.textContent = `${index + 1} / ${slides.length}`;
+
+    currentSlide = index;
+}
+
+nextButton.addEventListener("click", () => {
+    const nextSlide = (currentSlide + 1) % slides.length;
+    showSlide(nextSlide);
+});
+
+previousButton.addEventListener("click", () => {
+    const previousSlide =
+        (currentSlide - 1 + slides.length) % slides.length;
+
+    showSlide(previousSlide);
+});
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        showSlide(index);
+    });
+});
+
+/* Allow left/right arrow keys to control the slider */
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+        const nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+    }
+
+    if (event.key === "ArrowLeft") {
+        const previousSlide =
+            (currentSlide - 1 + slides.length) % slides.length;
+
+        showSlide(previousSlide);
+    }
+});

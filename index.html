@@ -126,20 +126,103 @@
 
                 <div class="recent-column" id="recent-column">
 
-                    <h2 class="section-heading">
-                        Recently...
-                    </h2>
+                    <h2 class="section-heading">Recently...</h2>
 
+                    <div class="recent-card">
 
-                    <div id="recent-section">
+                        <div class="recent-slider">
 
-                        <p>🚀 Built this portfolio website.</p>
+                            <!-- Slide 1: SGX FX Internship -->
+                            <button class="slider-button prev" aria-label="Previous update">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
 
-                        <p>📚 Preparing for internship applications.</p>
+                            <div class="recent-content">
 
-                        <p>💻 Learning more about full-stack web development.</p>
+                                <div class="recent-slide active">
+                                    <span class="recent-date">Summer 2026</span>
 
-                        <p>☕ Currently drinking too much coffee.</p>
+                                    <h3>Developer Intern @ SGX FX internship</h3>
+
+                                    <p>
+                                        Completed a Developer Internship working on Java backend development
+                                        within a financial technology team. Collaborated with developers using
+                                        tools such as Git, Jira, and Kubernetes while contributing to the
+                                        development and maintenance of production systems. <br>
+                                        <b>Highlight:</b> Optimised cache lookup performance by replacing a 
+                                        list with a HashMap, reducing lookup time from 40--60 seconds to around 
+                                        100 ms; the improvement was deployed to production and recognised 
+                                        during a team demo.
+                                    </p>
+                                </div>
+
+                                <!-- Slide 2: Kaprekar -->
+                                <div class="recent-slide">
+                                    <span class="recent-date">August 2026</span>
+
+                                    <h3>Built my Kaprekar's Constant project</h3>
+
+                                    <p>
+                                        Implemented Kaprekar's routine algorithm to repeatedly 
+                                        rearrange and subtract digits until reaching the constant, 
+                                        <b>6174</b>>. Built input validation and error handling for 
+                                        4-digit numbers, including handling leading zeroes throughout 
+                                        the calculation. Created a dynamic React interface that 
+                                        visualises each step of the routine based on user input.
+                                    </p>
+                                    <div class="project-media">
+                                        <img src="media/videos/kaprekar_constant.gif"
+                                            alt="Kaprekar's constant visualisation"
+                                            style="width: 50%; height: auto;">
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3: Bloomberg -->
+                                <div class="recent-slide">
+                                    <span class="recent-date">April 2026</span>
+
+                                    <h3>Attended Bloomberg Women in Tech Lab</h3>
+
+                                    <p>
+                                        Spent three days at Bloomberg's London office taking part in 
+                                        the Women In Tech Lab. I worked on an open-source Python 
+                                        project, contributing to a portfolio manager with features 
+                                        including securities, accounts and market value calculations. 
+                                        I also took part in workshops and heard from Bloomberg engineers 
+                                        about their experiences working in the industry.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <button class="slider-button next" aria-label="Next update">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="slider-footer">
+
+                            <span class="slide-counter">1 / 3</span>
+
+                            <div class="slider-dots">
+                                <button
+                                    class="slider-dot active"
+                                    aria-label="Go to slide 1">
+                                </button>
+
+                                <button
+                                    class="slider-dot"
+                                    aria-label="Go to slide 2">
+                                </button>
+
+                                <button
+                                    class="slider-dot"
+                                    aria-label="Go to slide 3">
+                                </button>
+                            </div>
+
+                        </div>
 
                     </div>
 
